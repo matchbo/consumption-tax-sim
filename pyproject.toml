@@ -1,0 +1,33 @@
+[project]
+name = "consumption-tax-sim"
+version = "0.1.0"
+description = """Rethinking Economics, with AI Assisted Provenance Tagging
+
+Imagine if when you buy your coffee at the local cafe you could see the exact cow and farm and time when the milk was milked, environmental impact statistics about CO2 and Methane emissions, land use, and aggregate information (for privacy) about the person who did the milking, how much they are paid and their conditions like work hours, labour laws, sick, carer and holiday leave allowances, as well as the same information about the exact bush or row the coffee beans were taken from, environmental conditions in which it is grown, information about the person(s) harvesting and roasting the coffee bans, as well as all the supply chain information about what ship / truck the ingredients were transported in and enviornmental impacts, and the conditions of the baristas at this particular cafe."""
+authors = [
+    { name = "Matt Pattison", email = "matt.pattison@gmail.com" }
+]
+dependencies = [
+    "mesa>=2.3.4",
+    "numpy>=2.1.1",
+    "pandas>=2.2.3",
+    "matplotlib>=3.9.2",
+    "seaborn>=0.13.2",
+    "jupyter>=1.1.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/consumption_tax_sim"]
